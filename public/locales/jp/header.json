@@ -1,0 +1,9 @@
+{
+  "title": "ログイン",
+  "header": "チャットボット CMS",
+  "input.username.placeholder": "Eメール",
+  "input.password.placeholder": "パスワード",
+  "forgot_password": "パスワードをお忘れですか？",
+  "btn.login": "ログイン",
+  "login_error": "アカウントまたはパスワードが正しくありません"
+}

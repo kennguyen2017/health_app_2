@@ -1,0 +1,8 @@
+{
+  "email.format": "Email address is not in the correct format",
+  "email.required": "Email address is required",
+  "password.required": "Password is required",
+  "password.short": "Password is too short (at least 8 characters)",
+  "password.long": "Password contains up to 200 characters",
+  "password.format": "Password is not in the correct format"
+}
