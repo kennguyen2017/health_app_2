@@ -21,3 +21,4 @@ export default function Column(props: IColumnProps) {
     </div>
   );
 }
+
