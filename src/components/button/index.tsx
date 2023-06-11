@@ -1,13 +1,18 @@
-import { useRef } from "react";
-import { Button } from "./Button";
+import { Interface } from "readline";
 
-export default function Button({ buttonText, handleAddTodoListItem }) {
-  const ref = useRef(null!);
+export Interface IButton {
+  buttonText:string,
+  handleClick: string
+}
+export default function Button(props: IButton) {
+  function handleClick(e)=>{
+    console.log("e")
+  }
   return (
     <>
-      <Button onClick={handleClick} ref={ref}>
-        Test
-      </Button>
+      <button onClick={handleClick}>
+        {buttonText}
+      </button>
     </>
   );
 }

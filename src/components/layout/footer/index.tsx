@@ -1,40 +1,62 @@
 import { Dropdown, Layout, Menu } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-
-export interface HeaderProps {}
+//import './footer.css';
+export interface FooterProps {}
 
 const items = [
   {
     url: "",
-    label: "my_record",
+    label: "会員登録",
   },
   {
     url: "",
-    label: "my_record",
+    label: "運営会社",
   },
   {
     url: "",
-    label: "my_record",
+    label: "利用規約",
+  },
+  {
+    url: "",
+    label: "個人情報の取扱について",
+  },
+  {
+    url: "",
+    label: "特定商取引法に基づく表記",
+  },
+  {
+    url: "",
+    label: "お問い合わせ",
   },
 ];
-
-export function Footer(props: HeaderProps) {
-  const { t } = useTranslation("header");
+//className="flex items-center justify-between w-full
+export function Footer(props: FooterProps) {
+  const { t } = useTranslation("footer");
 
   return (
-    <Layout.Footer className="header align-middle flex">
-      <div className="flex items-center justify-between w-full">
-        <div className="grow">
-          {items.map((item, index) => {
-            return (
-              <Link key={index} href={item.url} prefetch={false}>
-                {item.label}
-              </Link>
-            );
-          })}
+    <Layout.Footer>
+      
+        <div className="grow" style={{background: '#414141',
+              height: '128px',
+              color: '#FFFFFF',
+              margin: 15,
+              //margin-left: 10
+              }}
+        >
+          <Menu 
+          className="flex items-center justify-between w-full"
+          style={{fontSize: "11px", top: "48px", position:"relative"}}
+          mode="horizontal"
+          items = {items.map((item) => {
+              return {
+                //url: {item.url},
+                label: item.label,
+              };
+            })}
+          />
         </div>
-      </div>
+      
     </Layout.Footer>
   );
 }
